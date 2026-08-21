@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For Smriti ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Poppins,sans-serif;color:#fff}
+body{background:#130d20;overflow-x:hidden}
+.page{display:none;min-height:100vh;position:relative;align-items:center;justify-content:center;padding:24px 18px}
+.page.active{display:flex}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-3}
+.bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,6,25,.18),rgba(15,6,26,.75))}
+.glass{width:min(94vw,500px);padding:30px 22px;border:1px solid rgba(255,255,255,.2);border-radius:30px;background:rgba(25,10,30,.34);backdrop-filter:blur(9px);box-shadow:0 25px 70px #0008;text-align:center}
+.script{font-family:Caveat,cursive}
+h1{font:600 clamp(3.5rem,16vw,6rem)/.85 Caveat,cursive;margin:15px 0;text-shadow:0 5px 25px #0008}
+h2{font:600 clamp(2.2rem,10vw,4rem)/1 Caveat,cursive;margin:12px 0;text-shadow:0 4px 18px #0008}
+p{line-height:1.75;font-size:1rem}
+.btn{display:block;width:min(90%,340px);margin:16px auto;padding:15px 20px;border:0;border-radius:30px;background:linear-gradient(90deg,#ff4d88,#ff6a98);color:white;font-weight:700;font-size:1rem;box-shadow:0 10px 28px #ff3d7560;cursor:pointer}
+.btn:active{transform:scale(.98)}
+.heart{font-size:4.5rem;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{transform:scale(1.13)}}
+.pink{color:#ff9fbd}.tiny{font-size:.78rem;opacity:.75}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0}
+.gallery img{width:100%;height:155px;object-fit:cover;border-radius:17px;border:1px solid #fff3}
+.quiz{text-align:left}.choice{padding:14px;margin:10px 0;border:1px solid #ffffff2b;border-radius:16px;background:#111827b8;cursor:pointer}
+.choice.correct{background:#ff4d88}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:25px 0}
+.unit{padding:12px 4px;border:1px solid #ffffff40;border-radius:15px;background:#ffffff0d}.unit b{font-size:1.45rem;display:block}.unit span{font-size:.65rem}
+.cake{font-size:7rem;filter:drop-shadow(0 10px 20px #0006);animation:float 2s infinite ease-in-out}
+@keyframes float{50%{transform:translateY(-8px)}}
+.letter{background:#fff4f7;color:#55223b;border-radius:20px;padding:25px 20px;text-align:left;box-shadow:0 20px 50px #0005}
+.letter h3{text-align:center;font:600 2.2rem Caveat,cursive;color:#b83d69;margin:0 0 15px}
+.music{background:#171020d9;border:1px solid #ffffff25;border-radius:22px;padding:18px;margin-top:18px}
+.music-icon{width:90px;height:90px;margin:auto;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:linear-gradient(135deg,#fd739e,#6845bb)}
+#fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}.particle{position:absolute;bottom:-40px;animation:rise 5s linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.dots{display:flex;justify-content:center;gap:7px;margin-top:18px}.dot{width:7px;height:7px;border-radius:50%;background:#ffffff55}.dot.on{background:#fff}
+</style>
+</head>
+<body>
+<div id="fx"></div>
+
+<section class="page active" id="p1">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass">
+<div class="heart">❤️</div><div class="tiny">A LITTLE SURPRISE FOR YOU</div>
+<h1>Hey Smriti</h1><p>I made this little world just for the most beautiful girl in my life. 💗</p>
+<button class="btn" onclick="go(2)">Open Your Surprise 💝</button>
+</div></section>
+
+<section class="page" id="p2">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass">
+<div class="tiny">21 • 08 • 2026</div><h2>Happy Birthday</h2><h1 class="pink">Smriti</h1>
+<p>You are one of the most precious parts of my life. Your smile makes my world feel a little better. 💕</p>
+<div class="count"><div class="unit"><b id="d">00</b><span>DAYS</span></div><div class="unit"><b id="h">00</b><span>HOURS</span></div><div class="unit"><b id="m">00</b><span>MINUTES</span></div><div class="unit"><b id="s">00</b><span>SECONDS</span></div></div>
+<button class="btn" onclick="go(3)">Next →</button>
+</div></section>
+
+<section class="page" id="p3">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass">
+<h2>Our Beautiful Memories 💕</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=85">
+<img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=85">
+<img src="https://images.unsplash.com/photo-1560972550-aba3456b5564?auto=format&fit=crop&w=600&q=85">
+<img src="https://images.unsplash.com/photo-1614583225154-5fcdda07019e?auto=format&fit=crop&w=600&q=85">
+</div><p>Every little moment with you is my favorite memory. ❤️</p>
+<button class="btn" onclick="go(4)">Next →</button>
+</div></section>
+
+<section class="page" id="p4">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass quiz"><h2>Love Quiz 💕</h2><p>Who loves Smriti the most in this whole world? 🥰</p>
+<div class="choice" onclick="wrong()">A) Nobody</div><div class="choice" onclick="right()">B) Me ❤️</div><div class="choice" onclick="wrong()">C) Obviously Me 😂</div>
+<p id="quiz"></p></div></section>
+
+<section class="page" id="p5">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass"><h2>Countdown to Smriti's<br>Special Day ✨</h2>
+<div class="count"><div class="unit"><b id="d2">00</b><span>DAYS</span></div><div class="unit"><b id="h2">00</b><span>HOURS</span></div><div class="unit"><b id="m2">00</b><span>MINUTES</span></div><div class="unit"><b id="s2">00</b><span>SECONDS</span></div></div>
+<p>Wishing you the happiest birthday! 💗</p><button class="btn" onclick="go(6)">Next →</button>
+</div></section>
+
+<section class="page" id="p6">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass"><h2>Make a Wish, Smriti ✨</h2><div class="cake">🎂</div>
+<p>Close your eyes, make a wish, and tap when you're ready. 🕯️</p>
+<button class="btn" onclick="go(7)">Make a Wish 💫</button></div></section>
+
+<section class="page" id="p7">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass"><div class="letter"><h3>A Letter For You 💌</h3>
+<p>Smriti,</p><p>Timi mero life ma aayepachi simple moments pani special feel huna thaleko cha. Timro smile, timro voice, timro sano-sano kura—everything about you makes my heart smile.</p>
+<p>Ma perfect huna sakdina, tara timro side ma basera timilai support garna, timro happiness ma khusi huna ra timilai pure heart le maya garna chai sadhai try garnechu. ❤️</p>
+<p>Happy Birthday, my love! You mean the world to me. 🌸</p></div>
+<button class="btn" onclick="go(8)">Our Song 🎵</button></div></section>
+
+<section class="page" id="p8">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass"><h2>Our Song 🎵💕</h2><div class="music">
+<div class="music-icon" id="musicIcon">🎵</div>
+<p><b>Othaiyadi Pathayila</b><br><span class="tiny">Our Special Song ❤️</span></p>
+<audio id="bgMusic" preload="metadata" loop>
+  <source src="othaiyadi.mp3" type="audio/mpeg">
+</audio>
+<button class="btn" id="musicBtn" onclick="toggleMusic()">▶ Play Othaiyadi 💕</button>
+<div style="margin:14px auto;max-width:330px">
+  <input id="seek" type="range" min="0" max="100" value="0" style="width:100%">
+  <div class="tiny" id="time">00:00 / 00:00</div>
+</div>
+</div>
+<p>Tap play and enjoy the song while exploring the surprise. ❤️</p>
+<button class="btn" onclick="go(9)">Final Surprise 🎁</button></div></section>
+
+<section class="page" id="p9">
+<div class="bg" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=85')"></div>
+<div class="glass"><div class="heart">💖</div><h2>Happy Birthday</h2><h1 class="pink">Smriti ❤️</h1>
+<p>You are my today and all of my tomorrows.</p><p><b>Always and forever yours. 💕</b></p>
+<button class="btn" onclick="celebrate()">I Love You So Much 💗</button><button class="btn" onclick="location.reload()">Replay 🔄</button></div></section>
+
+<script>
+function go(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('p'+n).classList.add('active');window.scrollTo(0,0)}
+const music=document.getElementById('bgMusic');
+const musicBtn=document.getElementById('musicBtn');
+const seek=document.getElementById('seek');
+const timeLabel=document.getElementById('time');
+
+function toggleMusic(){
+  if(music.paused){
+    music.play().then(()=>{
+      musicBtn.textContent='⏸ Pause Othaiyadi';
+      document.getElementById('musicIcon').textContent='🎶';
+    }).catch(()=>{
+      musicBtn.textContent='▶ Tap to Play';
+    });
+  }else{
+    music.pause();
+    musicBtn.textContent='▶ Play Othaiyadi 💕';
+    document.getElementById('musicIcon').textContent='🎵';
+  }
+}
+music.addEventListener('loadedmetadata',()=>{
+  seek.max=music.duration;
+  timeLabel.textContent='00:00 / '+formatTime(music.duration);
+});
+music.addEventListener('timeupdate',()=>{
+  seek.value=music.currentTime;
+  timeLabel.textContent=formatTime(music.currentTime)+' / '+formatTime(music.duration);
+});
+seek.addEventListener('input',()=>{music.currentTime=seek.value});
+music.addEventListener('ended',()=>{musicBtn.textContent='▶ Play Othaiyadi 💕'});
+function formatTime(v){
+  if(!isFinite(v)) return '00:00';
+  const m=Math.floor(v/60), s=Math.floor(v%60);
+  return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+}
+function wrong(){document.getElementById('quiz').textContent='Wrong answer 😌 Try again ❤️'}
+function right(){document.getElementById('quiz').textContent='Correct! 😂❤️ I love you, Smriti!';setTimeout(()=>go(5),800)}
+const target=new Date('2026-08-21T23:59:59+05:45');
+function clock(){
+ let x=Math.max(0,target-new Date()),s=Math.floor(x/1000),d=Math.floor(s/86400);s%=86400;
+ let h=Math.floor(s/3600);s%=3600;let m=Math.floor(s/60);s%=60;
+ ['d','h','m','s'].forEach((id,i)=>document.getElementById(id).textContent=String([d,h,m,s][i]).padStart(2,'0'));
+ ['d2','h2','m2','s2'].forEach((id,i)=>document.getElementById(id).textContent=String([d,h,m,s][i]).padStart(2,'0'));
+}
+clock();setInterval(clock,1000);
+function celebrate(){for(let i=0;i<90;i++){let e=document.createElement('div');e.className='particle';e.textContent=['❤️','💕','💖','✨','🌸','🎉'][Math.floor(Math.random()*6)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(18+Math.random()*30)+'px';e.style.animationDuration=(3+Math.random()*4)+'s';document.getElementById('fx').appendChild(e);setTimeout(()=>e.remove(),8000)}}
+</script>
+</body>
+</html>
